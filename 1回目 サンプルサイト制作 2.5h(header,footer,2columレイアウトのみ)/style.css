@@ -1,0 +1,77 @@
+/* header */
+header {
+  height: 150px;
+  border-bottom: 2px solid white;
+}
+.logo {
+  background: gray;
+  text-align: center;
+}
+.nav {
+ height: 50px; 
+ text-align: center;
+}
+.nav_item {
+  list-style: none;
+  display:inline-block ; /*listアイテムを横並びにする*/
+  font-size: 20px;
+  margin-right: 100px;
+}
+.nav_item a{
+  text-decoration: none;
+  color: gray;
+}
+
+/* main */
+main {
+  width: 1024px;
+}
+
+/*2columレイアウトのfotterのめりこみ解除 2パターン*/
+.container {
+  overflow: hidden; 
+}
+/*----------------------------------------------*/
+/* .container:after {
+  display: block;
+  clear: both;
+  content: "";
+} */
+/* END */
+
+.content {
+  height: 980px;
+  width: 65%;
+  float: left;
+}
+.sidebar {
+  height: 980px;
+  width: 30%;
+  float: right;
+}
+
+
+/* footer */
+footer {
+  height: 100px;
+  background: navy;
+}
+.contact {
+
+}
+.contact-item {
+  list-style:none;
+  display: inline-block;/*listアイテムを横並びにする*/
+  color: lightgrey;
+  /* float: right; */
+  margin-right: 20px;
+  border-right: 1px solid lightgray;
+}
+.contact-item a{
+  text-decoration: none;
+  color: gray;
+}
+.copyright {
+  text-align: center;
+  color: white;
+}
