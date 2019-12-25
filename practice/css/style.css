@@ -50,7 +50,7 @@ a:link, a:visited, a:hover, a:active {
   box-shadow: 0 0 10px 1px #e3e3e3;
 }
 .logo {
- width: 225px; 
+ width: 225px;
  height: 56px;
  margin: 0 auto;
  background: url('../images/logo.png') no-repeat;
@@ -150,7 +150,7 @@ a:link, a:visited, a:hover, a:active {
   background-color: #fff;
   color: #2d3d54;
   letter-spacing: 1px;
-  text-align: center; 
+  text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
   line-height: 1;
@@ -194,7 +194,7 @@ a:link, a:visited, a:hover, a:active {
   line-height: 16px;
 }
 .scroll-list .category.news {
- background-color: #3c3c53; 
+ background-color: #3c3c53;
 }
 .scroll-list .title {
   display: inline-block;
@@ -420,4 +420,9 @@ a:link, a:visited, a:hover, a:active {
   letter-spacing: 1px;
 }
 
-
+.book::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f15c";
+  font-weight: 900;
+  padding-right: 5px;
+}
