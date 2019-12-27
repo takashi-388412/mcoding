@@ -431,18 +431,22 @@ a:link, a:visited, a:hover, a:active {
   text-align: center;
   letter-spacing: 1px;
 }
+/* --------------------------------
+ * icon-font
+ * --------------------------------*/
 .book::before{
   font-family: "Font Awesome 5 Free";
   content: "\f15c";
   font-weight: 900;
-  padding-right: 5px;
+  padding-right: 10px;
   font-size: 20px;
+  color: #1E90FF;
 }
 .search_icon::before {
   font-family: "Font Awesome 5 Free";
   content: "\f002";
   font-weight: 900;
-  padding-right: 5px;
+  padding-right: 8px;
   font-size: 20px;
 }
 .search_icon_small::before {
@@ -450,4 +454,12 @@ a:link, a:visited, a:hover, a:active {
   content: "\f002";
   font-weight: 900;
   font-size: 15px;
+}
+.ranking_icon::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f521";
+  font-weight: 900;
+  padding-right: 8px;
+  font-size: 18px;
+  color:#FFD700;
 }
