@@ -269,8 +269,12 @@ a:link, a:visited, a:hover, a:active {
  }
  .ranking {
    margin-bottom: 30px;
+   padding-top: 15px;
    list-style-type: none;
    counter-reset: ranking;
+ }
+ .ranking + li {
+   margin-top: 10px;
  }
  .ranking .ranking-item {
    position:relative;
@@ -279,6 +283,7 @@ a:link, a:visited, a:hover, a:active {
    display: block;
    font-size: 0;
    transition: opacity 0.15s;
+   margin-bottom: 10px;
  }
  .ranking .ranking-item a:hover {
    opacity: 0.8;
@@ -353,29 +358,36 @@ a:link, a:visited, a:hover, a:active {
    padding-left: 10px;
    background: url('../images/arrow.gif') no-repeat left center;
  }
+ .documents a {
+   color: #8a8a8a;
+   transition: 0.4s ease-in-out;
+ }
  .documents a:hover {
-   text-decoration: underline;
+   color: #ffb09a;
+   /* text-decoration: underline; */
  }
 .search-box {
-  padding: 15px;
-  background-color: #ccc;
+  border:1px solid black;
   font-size: 0;
+  width: 100%;
+  height: 26px;
 }
 .search-box > * {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .search-box .search-input {
-  width: 205px;
-  height: 26px;
-  padding: 0 10px;
+  width: 85%;
+  float: left;
   border: none;
+  padding: 0 10px;
+  height: 100%;
 }
 .search-box .search-button {
-  width: 40px;
-  height: 26px;
+  width: 15%;
+  float: left;
   border: none;
-  background-color: #d03c56;
-  color: #fff;
+  color: black;
+  height: 100%;
   cursor: pointer;
 }
 .search-box .text {
@@ -419,13 +431,37 @@ a:link, a:visited, a:hover, a:active {
   text-align: center;
   letter-spacing: 1px;
 }
-
-.icon_book::before{
+/* --------------------------------
+ * icon-font
+ * --------------------------------*/
+.book::before{
   font-family: "Font Awesome 5 Free";
   content: "\f15c";
   font-weight: 900;
+  padding-right: 10px;
   font-size: 20px;
-  padding-right: 5px;
+  color: #1E90FF;
+}
+.search_icon::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  font-weight: 900;
+  padding-right: 8px;
+  font-size: 20px;
+}
+.search_icon_small::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  font-weight: 900;
+  font-size: 15px;
+}
+.ranking_icon::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f521";
+  font-weight: 900;
+  padding-right: 8px;
+  font-size: 18px;
+  color:#FFD700;
 }
 .icon_html::before{
   font-family: "Font Awesome 5 Brands";
@@ -452,6 +488,7 @@ a:link, a:visited, a:hover, a:active {
   padding-right: 5px;
 }
 .share_button {
+
 }
 .icon_twitter::before{
   font-family: "Font Awesome 5 Brands";
