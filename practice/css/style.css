@@ -420,9 +420,63 @@ a:link, a:visited, a:hover, a:active {
   letter-spacing: 1px;
 }
 
-.book::before{
+.icon_book::before{
   font-family: "Font Awesome 5 Free";
   content: "\f15c";
   font-weight: 900;
+  font-size: 20px;
+  padding-right: 5px;
+}
+.icon_html::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f13b";
+  font-weight: 900;
+  font-size: 16px;
+  color: #FF6666;
+  padding-right: 5px;
+}
+.icon_css::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f38b";
+  font-weight: 900;
+  font-size: 20px;
+  color: #136FFF;
+  padding-right: 5px;
+}
+.icon_js::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f3b9";
+  font-weight: 900;
+  font-size: 18px;
+  color:#5BFF7F;
+  padding-right: 5px;
+}
+.share_button {
+}
+.icon_twitter::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f081";
+  font-weight: 900;
+  font-size: 50px;
+  color:#00BFFF;
+  display: inline-block;
+  padding-right: 5px;
+}
+.icon_instagram::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f16d";
+  font-weight: 900;
+  font-size: 50px;
+  color:#FF69B4	;
+  display: inline-block;
+  padding-right: 5px;
+}
+.icon_facebook::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f09a";
+  font-weight: 900;
+  font-size: 50px;
+  color:#1E90FF	;
+  display: inline-block;
   padding-right: 5px;
 }
