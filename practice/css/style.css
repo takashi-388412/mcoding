@@ -395,6 +395,25 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /* --------------------------------
+ * share button
+ * --------------------------------*/
+.share_button {
+ height: 200px;
+}
+.fl1 tw{
+  display: block;
+ height: 200px;
+}
+.icon_twitter {
+ height: 200px;
+}
+.in {
+
+}
+.fb {
+
+}
+/* --------------------------------
  * footer
  * --------------------------------*/
 .footer {
@@ -434,7 +453,7 @@ a:link, a:visited, a:hover, a:active {
 /* --------------------------------
  * icon-font
  * --------------------------------*/
-.book::before{
+.icon_book::before{
   font-family: "Font Awesome 5 Free";
   content: "\f15c";
   font-weight: 900;
@@ -487,9 +506,7 @@ a:link, a:visited, a:hover, a:active {
   color:#5BFF7F;
   padding-right: 5px;
 }
-.share_button {
-
-}
+/* share_icon */
 .icon_twitter::before{
   font-family: "Font Awesome 5 Brands";
   content: "\f081";
@@ -497,6 +514,7 @@ a:link, a:visited, a:hover, a:active {
   font-size: 50px;
   color:#00BFFF;
   display: inline-block;
+  float: left;
   padding-right: 5px;
 }
 .icon_instagram::before{
@@ -506,6 +524,7 @@ a:link, a:visited, a:hover, a:active {
   font-size: 50px;
   color:#FF69B4	;
   display: inline-block;
+  float: left;
   padding-right: 5px;
 }
 .icon_facebook::before{
@@ -515,5 +534,6 @@ a:link, a:visited, a:hover, a:active {
   font-size: 50px;
   color:#1E90FF	;
   display: inline-block;
+  float: left;
   padding-right: 5px;
 }
