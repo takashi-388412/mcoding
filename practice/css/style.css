@@ -395,25 +395,6 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /* --------------------------------
- * share button
- * --------------------------------*/
-.share_button {
- height: 200px;
-}
-.fl1 tw{
-  display: block;
- height: 200px;
-}
-.icon_twitter {
- height: 200px;
-}
-.in {
-
-}
-.fb {
-
-}
-/* --------------------------------
  * footer
  * --------------------------------*/
 .footer {
@@ -506,34 +487,36 @@ a:link, a:visited, a:hover, a:active {
   color:#5BFF7F;
   padding-right: 5px;
 }
-/* share_icon */
-.icon_twitter::before{
-  font-family: "Font Awesome 5 Brands";
-  content: "\f081";
+/* --------------------------------
+ * share button
+ * --------------------------------*/
+.share_button {
+  margin-bottom: 30px;
+}
+.share_icon::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f14d";
   font-weight: 900;
-  font-size: 50px;
-  color:#00BFFF;
-  display: inline-block;
-  float: left;
+  font-size: 18px;
+  color:#4169E1;
   padding-right: 5px;
 }
-.icon_instagram::before{
-  font-family: "Font Awesome 5 Brands";
-  content: "\f16d";
-  font-weight: 900;
-  font-size: 50px;
-  color:#FF69B4	;
+.share_button > a {
   display: inline-block;
-  float: left;
-  padding-right: 5px;
 }
-.icon_facebook::before{
-  font-family: "Font Awesome 5 Brands";
-  content: "\f09a";
-  font-weight: 900;
-  font-size: 50px;
-  color:#1E90FF	;
-  display: inline-block;
-  float: left;
-  padding-right: 5px;
+.fa-twitter-square {
+  color: #00BFFF;
+  margin: 0 30px;
+}
+.fa-instagram {
+  color: #FF69B4;
+  margin-right: 30px;
+}
+.fa-facebook {
+  color: #1E90FF;
+}
+.sub-description {
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
 }
