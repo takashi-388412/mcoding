@@ -493,6 +493,9 @@ a:link, a:visited, a:hover, a:active {
 .share_button {
   margin-bottom: 30px;
 }
+.share_button h2{
+  margin-bottom: 10px;
+}
 .share_icon::before{
   font-family: "Font Awesome 5 Free";
   content: "\f14d";
