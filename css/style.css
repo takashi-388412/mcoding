@@ -50,7 +50,7 @@ a:link, a:visited, a:hover, a:active {
   box-shadow: 0 0 10px 1px #e3e3e3;
 }
 .logo {
- width: 225px; 
+ width: 225px;
  height: 56px;
  margin: 0 auto;
  background: url('../images/logo.png') no-repeat;
@@ -150,11 +150,12 @@ a:link, a:visited, a:hover, a:active {
   background-color: #fff;
   color: #2d3d54;
   letter-spacing: 1px;
-  text-align: center; 
+  text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
   line-height: 1;
 }
+
 .scroll-list {
   max-height: 220px;
   overflow-y: auto;
@@ -193,7 +194,7 @@ a:link, a:visited, a:hover, a:active {
   line-height: 16px;
 }
 .scroll-list .category.news {
- background-color: #3c3c53; 
+ background-color: #3c3c53;
 }
 .scroll-list .title {
   display: inline-block;
@@ -204,6 +205,7 @@ a:link, a:visited, a:hover, a:active {
   white-space: nowrap;
   font-size: 1.2rem;
 }
+
 .article-box {
   position: relative;
   display: block;
@@ -211,11 +213,11 @@ a:link, a:visited, a:hover, a:active {
   height: 360px;
   margin-bottom: 30px;
   padding: 210px 15px 0;
-  box-shadow: 6px 6px 8px -4px rgba(0,0,0,0.15);
-  transition: opacity 0.15s;
+  transition: 0.3s ease-in-out;
 }
 .article-box:hover {
-  opacity: 0.8;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.20);
+  transform: translateY(-4px);
 }
 .article-box:nth-of-type(odd) {
   float: left;
@@ -267,8 +269,12 @@ a:link, a:visited, a:hover, a:active {
  }
  .ranking {
    margin-bottom: 30px;
+   padding-top: 15px;
    list-style-type: none;
    counter-reset: ranking;
+ }
+ .ranking + li {
+   margin-top: 10px;
  }
  .ranking .ranking-item {
    position:relative;
@@ -277,6 +283,7 @@ a:link, a:visited, a:hover, a:active {
    display: block;
    font-size: 0;
    transition: opacity 0.15s;
+   margin-bottom: 10px;
  }
  .ranking .ranking-item a:hover {
    opacity: 0.8;
@@ -337,7 +344,6 @@ a:link, a:visited, a:hover, a:active {
  .documents > li .title {
    margin: 15px 0;
    padding-left: 8px;
-   border-left: 5px solid #d03c56;
    font-size: 1.4rem;
    line-height: 1.2;
  }
@@ -352,29 +358,36 @@ a:link, a:visited, a:hover, a:active {
    padding-left: 10px;
    background: url('../images/arrow.gif') no-repeat left center;
  }
+ .documents a {
+   color: #8a8a8a;
+   transition: 0.4s ease-in-out;
+ }
  .documents a:hover {
-   text-decoration: underline;
+   color: #ffb09a;
+   /* text-decoration: underline; */
  }
 .search-box {
-  padding: 15px;
-  background-color: #ccc;
+  border:1px solid black;
   font-size: 0;
+  width: 100%;
+  height: 26px;
 }
 .search-box > * {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .search-box .search-input {
-  width: 205px;
-  height: 26px;
-  padding: 0 10px;
+  width: 85%;
+  float: left;
   border: none;
+  padding: 0 10px;
+  height: 100%;
 }
 .search-box .search-button {
-  width: 40px;
-  height: 26px;
+  width: 15%;
+  float: left;
   border: none;
-  background-color: #d03c56;
-  color: #fff;
+  color: black;
+  height: 100%;
   cursor: pointer;
 }
 .search-box .text {
@@ -418,5 +431,95 @@ a:link, a:visited, a:hover, a:active {
   text-align: center;
   letter-spacing: 1px;
 }
-
-
+/* --------------------------------
+ * icon-font
+ * --------------------------------*/
+.icon_book::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f15c";
+  font-weight: 900;
+  padding-right: 10px;
+  font-size: 20px;
+  color: #1E90FF;
+}
+.search_icon::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  font-weight: 900;
+  padding-right: 8px;
+  font-size: 20px;
+}
+.search_icon_small::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  font-weight: 900;
+  font-size: 15px;
+}
+.ranking_icon::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f521";
+  font-weight: 900;
+  padding-right: 8px;
+  font-size: 18px;
+  color:#FFD700;
+}
+.icon_html::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f13b";
+  font-weight: 900;
+  font-size: 16px;
+  color: #FF6666;
+  padding-right: 5px;
+}
+.icon_css::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f38b";
+  font-weight: 900;
+  font-size: 20px;
+  color: #136FFF;
+  padding-right: 5px;
+}
+.icon_js::before{
+  font-family: "Font Awesome 5 Brands";
+  content: "\f3b9";
+  font-weight: 900;
+  font-size: 18px;
+  color:#5BFF7F;
+  padding-right: 5px;
+}
+/* --------------------------------
+ * share button
+ * --------------------------------*/
+.share_button {
+  margin-bottom: 30px;
+}
+.share_button h2{
+  margin-bottom: 10px;
+}
+.share_icon::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f14d";
+  font-weight: 900;
+  font-size: 18px;
+  color:#4169E1;
+  padding-right: 5px;
+}
+.share_button > a {
+  display: inline-block;
+}
+.fa-twitter-square {
+  color: #00BFFF;
+  margin: 0 30px;
+}
+.fa-instagram {
+  color: #FF69B4;
+  margin-right: 30px;
+}
+.fa-facebook {
+  color: #1E90FF;
+}
+.sub-description {
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
