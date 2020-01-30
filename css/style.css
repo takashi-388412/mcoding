@@ -25,14 +25,22 @@ a:link,a:visited,a:hover,a:active {
 * item
 * ------------------------------------*/
 .item {
-  width: 180px;
+  /* width: 180px;
   margin-bottom: 4px;
   padding: 8px;
   border-bottom: 3px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #fff; */
 }
 
 /* -----------------------------------
-* item
+* header
 * ------------------------------------*/
+.header {
+  padding: ;
+  border-bottom: ;
+  text-align: ;
+}
+.logo {
+  width: ;
+}
