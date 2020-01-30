@@ -12,7 +12,11 @@ body {
   color: #fff;
   text-align: center;
   font-size: 1.4rem;
-  font-family: Raleway, "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+  /*google font*/
+  /* font-family: Raleway, "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif; */
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*各デバイスによって自体が違うがそこそこおしゃれ*/
+  /* font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'   */
 }
 *,*::before,*::after {
   box-sizing: border-box;
@@ -28,15 +32,26 @@ body {
   letter-spacing: 2px;
   font-size: 4rem;
 }
+/* practice------------------------------------------------------*/ 
 .heading::before,
 .heading::after {
   content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #999;
+  display: inline-block;
+  width: 0.3em;
+  height: 0.3em;
+  margin: 0 0.5em;
+  border: 1px solid;
+  vertical-align: 0.2em;
+  transform: rotate(45deg);
+  /*下記のようにベンダープレフィックスをつけると、最新版でなくても動作するようになる*/
+  /* Google Chrome、Safari*/
+  -webkit-transform: rotate(45deg);
+  /* Internet Explorer*/
+  -ms-transform: rotate(45deg);
+  /* Firefox*/
+  -moz-transform: rotate(45deg);
 }
+/* practice------------------------------------------------------*/ 
 .heading::before {
   bottom: 5px;
 }
@@ -54,13 +69,26 @@ body {
 .button:hover {
   opacity: 0.9;
 }
+/*original design buttonを立体的に*/
+.button:active {
+  transform: translateY(5px);
+  border-bottom: none;
+}
+.button-detail {
+ background-color: #afa58d;
+ border-bottom: solid 5px#8f8667;
+}
 .button-showy {
   background-color: #D29E04;
+  border-bottom: solid 5px#ba8b40;
 }
 .button-ghost {
-  border: 1px solid #fff;
+  border: 1px solid #c0c0c0;
   background-color: rgba(255,255,255,0.15);
+  border-bottom: solid 4px #7d7b83;
 }
+/*original design END*/
+
 /* ----------------------------
 * header
 * ----------------------------*/
@@ -124,11 +152,19 @@ body {
 .work-box {
   position: relative;
   display: table-cell;
+/* practice*/
+  overflow: hidden;
+/* practice END*/
 }
 .work-image {
   display: block;
   width: 100%;
   margin: 0 0 60%;
+/* practice*/
+/*時間変化*/
+  transition: transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+/* practice END*/
 }
 .work-description {
   position: absolute;
@@ -182,11 +218,28 @@ body {
 }
 .work-box:nth-child(odd) .work-image{
   margin: 60% 0 0;
+/* practice*/
+  transform-origin: top center;
+  -webkit-transform-origin:top center ;
 }
+.work-box:nth-child(even) .work-image {
+  transform-origin: bottom center;
+  -webkit-transform-origin: bottom center;
+}
+/* practice END*/
+
 .work-box:nth-child(odd) .work-description,
 .work-box:nth-child(odd)::after {
   top: 0;
 }
+
+/* practice*/
+.work-box:hover .work-image {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+/* practice END*/
+
 /* ----------------------------
 * skills 
 * ----------------------------*/
@@ -261,10 +314,20 @@ body {
   background-color: transparent;
   color: rgba(255,255,255,0.6);
   cursor: pointer;
+  /*original design*/
+  border-bottom: 3px solid #7d7d7d;
+  /*original design END*/
 }
 .contact-form input[type=submit]:hover {
   background-color: rgba(255,255,255,0.05);
 }
+  /*original design */
+.contact-form input[type=submit]:active {
+  transform: translateY(3px);
+  border-bottom: none;
+}
+  /*original design END*/
+
 /* ----------------------------
 * footer
 * ----------------------------*/
@@ -275,3 +338,79 @@ body {
 /* ----------------------------
 * smart phone
 * ----------------------------*/
+@media (max-width:1024px) {
+  body {
+    background-image: none;
+  }
+}
+@media (max-width:768px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .heading {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+  /* --- header --- */
+  .header {
+    padding-top: 60px;
+  }
+  .site-title-sub {
+    font-size: 1.7rem;
+  }
+  .site-title-sub::before,
+  .site-title-sub::after {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .site-title {
+    margin-top: 35px;
+    font-size: 5rem;
+  }
+  /* --- about --- */
+  .about-text {
+    line-height: 1.8;
+  }
+  /* --- works --- */
+  .works-wrapper,
+  .work-box {
+    display: block;
+  }
+  .work-image {
+    display: none;
+  }
+  .work-description {
+    position: relative;/* ??? */
+  }
+  .work-box::after {
+    top: 0;
+    height: 100%;
+    background-size: cover; /* ??? */
+    transform: none;/* ??? */
+  }
+  /* --- skills --- */
+  .skils-wrapper,
+  .skill-box {
+    display: block;
+  }
+  .skill-box {
+    margin: 40px auto;
+  }
+  .skill-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    line-height: 92px;
+  }
+  .skill-text {
+    margin: 0;
+  }
+  /* --- contact --- */
+  .contact {
+    padding-bottom: 80px;
+  }
+  .contact-form {
+    width: 80%;
+  }
+}
