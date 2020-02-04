@@ -134,8 +134,9 @@ body {
 .work-image {
   display: block;
   width: 100%;
-  margin: 0 0 60%;
+  margin: 0 0 60%;/*下に60%の空白を作成*/
 }
+/*workの説明文 → 疑似要素の画像と重なる*/
 .work-description {
   position: absolute;
   top: 50%;
@@ -162,6 +163,7 @@ body {
   margin-top: 20px;
   padding: 3px;
 }
+/*workの画像*/
 .work-box::after {
   content: '';
   position: absolute;
@@ -187,11 +189,11 @@ body {
   background-image: url('../images/sky.jpg');
 }
 .work-box:nth-child(odd) .work-image {
-  margin: 60% 0 0;
+  margin: 60% 0 0; /*上に60%の空白を作成(奇数番目)*/
 }
 .work-box:nth-child(odd) .work-description,
 .work-box:nth-child(odd)::after {
-  top: 0;
+  top: 0; /*2段目の重なっている2つの要素を両方共に、1番上へと寄せる(奇数番目)*/
 }
 
 
